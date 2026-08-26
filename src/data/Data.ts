@@ -55,4 +55,4 @@ export const tasks = [
     priority: "high",
     dueDate: "9/5/2026",
   },
-];
+]
