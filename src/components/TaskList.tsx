@@ -21,7 +21,19 @@ export interface TaskListProps {
 }
 
 function TaskList({ tasks, onStatusChange, onDelete }: TaskListProps) {
- 
+  return (
+    <div>
+      <h2>Tasks</h2>
+      {tasks.map((task) => (
+        <TaskItem
+          key={task.id}
+          task={task}
+          onStatusChange={onStatusChange}
+          onDelete={onDelete}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default TaskList;
