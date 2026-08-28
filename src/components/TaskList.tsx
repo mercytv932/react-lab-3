@@ -30,7 +30,6 @@ function TaskList({ tasks, onStatusChange, onDelete }: TaskListProps) {
           task={task}
           onStatusChange={onStatusChange}
           onDelete={onDelete}
-          // tasks = {TaskList}
         />
       ))}
     </div>
