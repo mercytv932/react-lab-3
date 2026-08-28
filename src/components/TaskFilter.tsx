@@ -9,10 +9,13 @@ export interface TaskFilterProps {
 
 function TaskFilter({ onFilterChange }: TaskFilterProps) {
   function handleStatusFilter(event: React.ChangeEvent<HTMLSelectElement>) {
-    const newSelectedStatus = event.target.value as TaskStatus;
+    const newSelectedStatus = event.target.value;
 
     onFilterChange({
-      status: newSelectedStatus,
+      status:
+        newSelectedStatus === "all"
+          ? undefined
+          : (newSelectedStatus as TaskStatus),
     });
   }
 
