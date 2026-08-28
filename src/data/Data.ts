@@ -1,4 +1,6 @@
-export const tasks = [
+import type { Task } from "../components/TaskList";
+
+export const tasks: Task[] = [
   {
     id: "1",
     title: "React Lab1",
@@ -55,4 +57,4 @@ export const tasks = [
     priority: "high",
     dueDate: "9/5/2026",
   },
-]
+];

@@ -26,10 +26,14 @@ function App() {
     setSelectedStatus(filter.status);
   }
 
+  const filteredTasks = !selectedStatus
+    ? taskList
+    : taskList.filter((task) => task.status === selectedStatus);
+
   return (
     <div>
       <TaskList
-        tasks={taskList}
+        tasks={filteredTasks}
         onDelete={handleDeleteBtn}
         onStatusChange={handleStatusChange}
       />

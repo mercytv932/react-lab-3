@@ -1,7 +1,4 @@
-import { useState } from "react";
-import { tasks } from "../data/Data";
 import TaskItem from "./TaskItem";
-import TaskFilter from "./TaskFilter";
 
 // types/index.ts
 export type TaskStatus = "pending" | "in-progress" | "completed";
