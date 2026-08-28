@@ -2,9 +2,11 @@ import { useState } from "react";
 
 import { tasks } from "./data/Data";
 import TaskList, { type TaskStatus } from "./components/TaskList";
+import TaskFilter from "./components/TaskFilter";
 
 function App() {
   const [taskList, setTaskList] = useState(tasks);
+  const [selectedStatus, setSelectedStatus] = useState<TaskStatus>();
 
   function handleDeleteBtn(taskId: string) {
     const updatedTasks = taskList.filter((task) => task.id !== taskId);
@@ -20,12 +22,19 @@ function App() {
     setTaskList(tasksAfterStatusChange);
   }
 
+  function handleStatusFilters(filter: { status?: TaskStatus }) {
+    setSelectedStatus(filter.status);
+  }
+
   return (
-    <TaskList
-      tasks={taskList}
-      onDelete={handleDeleteBtn}
-      onStatusChange={handleStatusChange}
-    />
+    <div>
+      <TaskList
+        tasks={taskList}
+        onDelete={handleDeleteBtn}
+        onStatusChange={handleStatusChange}
+      />
+      <TaskFilter onFilterChange={handleStatusFilters} />
+    </div>
   );
 }
 

@@ -11,7 +11,7 @@ function TaskFilter({ onFilterChange }: TaskFilterProps) {
   function handleStatusFilter(event: React.ChangeEvent<HTMLSelectElement>) {
     const newSelectedStatus = event.target.value;
 
-    onFilterChange({
+   onFilterChange({
       status:
         newSelectedStatus === "all"
           ? undefined
