@@ -26,7 +26,7 @@ export const tasks: Task[] = [
     dueDate: "8/29/2026",
   },
   {
-    id: "1",
+    id: "4",
     title: "Interview",
     description: "Interviewing for job applications",
     status: "pending",
@@ -34,7 +34,7 @@ export const tasks: Task[] = [
     dueDate: "8/31/2026",
   },
   {
-    id: "1",
+    id: "5",
     title: "React Lab 1",
     description: "Build a React project to practice React concepts",
     status: "pending",
@@ -42,7 +42,7 @@ export const tasks: Task[] = [
     dueDate: "8/31/2026",
   },
   {
-    id: "2",
+    id: "6",
     title: "TypeScript + React",
     description: "Practice using TypeScript with React components",
     status: "in-progress",
@@ -50,7 +50,7 @@ export const tasks: Task[] = [
     dueDate: "8/30/2026",
   },
   {
-    id: "3",
+    id: "7",
     title: "Portfolio Project",
     description: "Add a new React project to my portfolio",
     status: "completed",
